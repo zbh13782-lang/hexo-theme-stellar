@@ -146,7 +146,13 @@ function layoutFooterDiv() {
 }
 
 function layoutLogo() {
-  return partial('logo', {where: 'sidebar'})
+  var el = partial('logo', {where: 'sidebar'})
+  el += `<div style="text-align: center; margin-top: 10px;">`
+  el += `<a href="https://codetime.dev" target="_blank" rel="external nofollow noopener noreferrer">`
+  el += `<img no-lazy style="display: block; margin: 0 auto;" src="https://shields.jannchie.com/endpoint?style=social&color=222&url=https%3A%2F%2Fapi.codetime.dev%2Fv3%2Fusers%2Fshield%3Fuid%3D35418" alt="CodeTime Badge">`
+  el += `</a>`
+  el += `</div>`
+  return el
 }
 
 function layoutNavArea() {
